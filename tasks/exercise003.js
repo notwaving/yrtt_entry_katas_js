@@ -22,18 +22,17 @@
 // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
 function rowWeights(array) {
-  // If position in the array is odd, push the weight to team 1's counter
-
   let team1 = 0;
   let team2 = 0;
 
   let i;
+
   for (i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      // If position in the array is even, add the weight to team 2's counter, else add to team1's counter
-      team2 += array[i];
-    } else {
+    // If position in the array is even, add the weight to team 2's counter, else, add to team1's counter. Remember to offset zero-indexing when identifying by position in array.
+    if (i % 2 === 0) {
       team1 += array[i];
+    } else {
+      team2 += array[i];
     }
   }
   // Return the summed amounts in an array
