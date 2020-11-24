@@ -7,11 +7,16 @@
 
 function singles(arr) {
   if (arr === undefined) throw new Error('array is required');
-  // Your code here!
-  // Filter the array for numbers that appear only once
+  const newArray = arr
+    // Sort first, so we can compare values that are next to each other in the filter method
+    .sort()
+    // Filter the array for numbers that appear only once
+    .filter((number, i) => !(arr[i] == arr[i + 1] || arr[i - 1] == arr[i]));
   // Reduce the result of the filter to find the sum of the results
-  const sorted = [...new Set(arr)];
-  console.log(sorted);
+  let answer = newArray.reduce(function (a, b) {
+    return a + b;
+  }, 0);
+  return answer;
 }
 
 module.exports = {
