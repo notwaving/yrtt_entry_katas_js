@@ -10,6 +10,8 @@ function singles(arr) {
   // Your code here!
   // Filter the array for numbers that appear only once
   // Reduce the result of the filter to find the sum of the results
+  const sorted = [...new Set(arr)];
+  console.log(sorted);
 }
 
 module.exports = {
