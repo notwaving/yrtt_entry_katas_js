@@ -21,10 +21,25 @@
 // Explanation:
 // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
-function rowWeights(array){
-    // Your code here!
+function rowWeights(array) {
+  // If position in the array is odd, push the weight to team 1's counter
+
+  let team1 = 0;
+  let team2 = 0;
+
+  let i;
+  for (i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      // If position in the array is even, add the weight to team 2's counter, else add to team1's counter
+      team2 += array[i];
+    } else {
+      team1 += array[i];
+    }
+  }
+  // Return the summed amounts in an array
+  return [team1, team2];
 }
 
 module.exports = {
-    rowWeights
+  rowWeights,
 };
