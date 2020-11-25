@@ -23,7 +23,7 @@ function mexicanWave(str) {
   let array = str.split('');
   let answer = [];
   let i;
-  for (i = 0; i < array.length; i++) {
+  for (i = 0; i < str.length; i++) {
     answer.push(str[i]);
   }
   return answer;

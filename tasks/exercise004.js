@@ -12,7 +12,7 @@ function pigLatin(str) {
 
         // Identify punctuation, remove it from the word and store in a variable
         // let punctuation = punctuation.replace(//[\s|\.]+$/i, ''/)
-
+        // ?????
         // Return each word, starting at the 2nd letter, then add the first letter, plus 'ay'
         return word.slice(1) + firstLetter + 'ay';
       })
